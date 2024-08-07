@@ -1,0 +1,8 @@
+<nav>
+  <a routerLink="/">Mi app</a>
+  <select name="locale" id="locale" (change)="changeLanguage($event)">
+    @for (locale of locales; track locale.value) {
+    <option [value]="locale.value">{{ locale.name }}</option>
+    }
+  </select>
+</nav>
